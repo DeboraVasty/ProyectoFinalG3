@@ -3,6 +3,7 @@ import dao.ClienteDao;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import modelo.ClientesModelo;
 import vista.JIntlFrmInsertarCliente;
@@ -16,6 +17,7 @@ public class ClienteControlador implements ActionListener{
     JIntlFrmModificarCliente modificarCliente = new JIntlFrmModificarCliente();
     ClienteDao clienteDao = new ClienteDao();
     ClientesModelo clienteModelo = new ClientesModelo();
+    String mensaje;
 
     public ClienteControlador(JIntlFrmInsertarCliente insertarCliente, JIntlFrmListadoClientes listadoCliente, JIntlFrmEliminarCliente eliminarCliente,JIntlFrmModificarCliente modificarCliente) {
         this.insertarCliente=insertarCliente;
@@ -28,6 +30,7 @@ public class ClienteControlador implements ActionListener{
         this.modificarCliente.jBtnRegresar.addActionListener(this);
         this.eliminarCliente.jBtnEliminarCliente.addActionListener(this);
         this.eliminarCliente.jBtnRegresar.addActionListener(this);
+        cargarTabla1();
     }
     
     public void cargarTabla1(){
@@ -54,9 +57,60 @@ public class ClienteControlador implements ActionListener{
         eliminarCliente.jTblListadoClientes.setModel(modeloTabla);
     }
     
+    private void borrarControladores(){
+        this.insertarCliente.jTxtCodigo.setText("");
+        this.insertarCliente.jTxtNombre.setText("");
+        this.insertarCliente.jTxtApelldio.setText("");
+        this.insertarCliente.jTxtTelefono.setText("");
+        this.insertarCliente.jTxtDireccion.setText("");
+        this.insertarCliente.jTxtCorreo.setText("");
+        this.insertarCliente.jTxtCodigo.requestFocus();
+    }
+    private void borrarControladores2(){
+        this.modificarCliente.jTxtCodigo.setText("");
+        this.modificarCliente.jTxtNombre.setText("");
+        this.modificarCliente.jTxtApelldio.setText("");
+        this.modificarCliente.jTxtTelefono.setText("");
+        this.modificarCliente.jTxtDireccion.setText("");
+        this.modificarCliente.jTxtCorreo.setText("");
+        this.modificarCliente.jTxtCodigo.requestFocus();
+    }
+    
+    private void borrarControladores3(){
+        this.eliminarCliente.jTxtCodigo.setText("");
+        this.eliminarCliente.jTxtCodigo.requestFocus();
+    }
+    
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(e.getSource()==this.insertarCliente.jBtnInsertarCliente){
+            clienteModelo.setCliente_id(this.insertarCliente.jTxtCodigo.getText());
+            clienteModelo.setNombre(this.insertarCliente.jTxtNombre.getText());
+            clienteModelo.setApellido(this.insertarCliente.jTxtApelldio.getText());
+            clienteModelo.setTelefono(Integer.parseInt(this.insertarCliente.jTxtTelefono.getText()));
+            clienteModelo.setDireccion(this.insertarCliente.jTxtDireccion.getText());
+            clienteModelo.setCorreo_electronico(this.insertarCliente.jTxtCorreo.getText());
+            mensaje=clienteDao.insertarCliente(clienteModelo);
+            JOptionPane.showConfirmDialog(insertarCliente, mensaje);
+            borrarControladores();
+        }
+        if(e.getSource()==this.modificarCliente.jBtnModificarCliente){
+            clienteModelo.setNombre(this.modificarCliente.jTxtNombre.getText());
+            clienteModelo.setApellido(this.modificarCliente.jTxtApelldio.getText());
+            clienteModelo.setTelefono(Integer.parseInt(this.modificarCliente.jTxtTelefono.getText()));
+            clienteModelo.setDireccion(this.modificarCliente.jTxtDireccion.getText());
+            clienteModelo.setCorreo_electronico(this.modificarCliente.jTxtCorreo.getText());
+            clienteModelo.setCliente_id(this.modificarCliente.jTxtCodigo.getText());
+            mensaje=clienteDao.modificarCliente(clienteModelo);
+            JOptionPane.showConfirmDialog(modificarCliente, mensaje);
+            borrarControladores2();
+        }
+        if(e.getSource()==this.eliminarCliente.jBtnEliminarCliente){
+            clienteModelo.setCliente_id(this.eliminarCliente.jTxtCodigo.getText());
+            mensaje=clienteDao.eliminarCliente(clienteModelo);
+            JOptionPane.showConfirmDialog(eliminarCliente, mensaje);
+            borrarControladores3();
+        }
     }
     
 }

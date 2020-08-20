@@ -33,6 +33,8 @@ public class JIntFrmEliminarOferta extends javax.swing.JInternalFrame {
         jTblListadoOfertas = new javax.swing.JTable();
         jBtnEliminarOfertas = new javax.swing.JButton();
         jBtnRegresar = new javax.swing.JButton();
+        jTxtCodigo = new javax.swing.JTextField();
+        jLblCodigo = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(102, 255, 255));
 
@@ -75,6 +77,11 @@ public class JIntFrmEliminarOferta extends javax.swing.JInternalFrame {
         jBtnRegresar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jBtnRegresar.setText("Regresar");
 
+        jTxtCodigo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+
+        jLblCodigo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo.setText("Código:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -86,23 +93,32 @@ public class JIntFrmEliminarOferta extends javax.swing.JInternalFrame {
                         .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(163, 163, 163)
+                        .addGap(157, 157, 157)
                         .addComponent(jBtnEliminarOfertas, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jBtnRegresar)))
+                        .addComponent(jBtnRegresar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(jLblCodigo)
+                        .addGap(121, 121, 121)
+                        .addComponent(jTxtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLblCodigo)
+                    .addComponent(jTxtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jBtnEliminarOfertas, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBtnRegresar))
-                .addGap(0, 14, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
         );
 
         pack();
@@ -113,8 +129,10 @@ public class JIntFrmEliminarOferta extends javax.swing.JInternalFrame {
     public javax.swing.JButton jBtnEliminarOfertas;
     public javax.swing.JButton jBtnRegresar;
     private javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLblCodigo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTable jTblListadoOfertas;
+    public javax.swing.JTextField jTxtCodigo;
     // End of variables declaration//GEN-END:variables
 }
