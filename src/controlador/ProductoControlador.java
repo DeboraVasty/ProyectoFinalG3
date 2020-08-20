@@ -1,4 +1,4 @@
-package contolador;
+package controlador;
 import dao.ProductoDao;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

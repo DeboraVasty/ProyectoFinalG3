@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vista;
-
-/**
- *
- * @author Marvin Joel
- */
+import controlador.ClienteControlador;
+import controlador.OfertaControlador;
+import controlador.ProductoControlador;
 public class MdiEncargadoDeVentas extends javax.swing.JFrame {
 
     /**
@@ -30,20 +23,20 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuIngresarCliente = new javax.swing.JMenuItem();
+        jMenuModificarCliente = new javax.swing.JMenuItem();
+        jMenuEliminarCliente = new javax.swing.JMenuItem();
+        jMenuListadoClientes = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuIngresarProducto = new javax.swing.JMenuItem();
+        jMenuModificarProducto = new javax.swing.JMenuItem();
+        jMenuEliminarProducto = new javax.swing.JMenuItem();
+        jMenuInventarioProductos = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
-        jMenuItem11 = new javax.swing.JMenuItem();
-        jMenuItem12 = new javax.swing.JMenuItem();
+        jMenuIngresarOferta = new javax.swing.JMenuItem();
+        jMenuModificarOferta = new javax.swing.JMenuItem();
+        jMenuEliminarOferta = new javax.swing.JMenuItem();
+        jMenuListadoOferta = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -63,22 +56,37 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
 
         jMenu1.setText("Clientes");
 
-        jMenuItem1.setText("Ingresar Cliente");
-        jMenu1.add(jMenuItem1);
-
-        jMenuItem2.setText("Modificar Cliente");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jMenuIngresarCliente.setText("Ingresar Cliente");
+        jMenuIngresarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                jMenuIngresarClienteActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
+        jMenu1.add(jMenuIngresarCliente);
 
-        jMenuItem3.setText("Eliminar Cliente");
-        jMenu1.add(jMenuItem3);
+        jMenuModificarCliente.setText("Modificar Cliente");
+        jMenuModificarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuModificarClienteActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuModificarCliente);
 
-        jMenuItem4.setText("Ver Lista Clientes");
-        jMenu1.add(jMenuItem4);
+        jMenuEliminarCliente.setText("Eliminar Cliente");
+        jMenuEliminarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuEliminarClienteActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuEliminarCliente);
+
+        jMenuListadoClientes.setText("Ver Lista Clientes");
+        jMenuListadoClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuListadoClientesActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuListadoClientes);
 
         jMenuBar1.add(jMenu1);
 
@@ -89,38 +97,53 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
             }
         });
 
-        jMenuItem5.setText("Ingresar Producto");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        jMenuIngresarProducto.setText("Ingresar Producto");
+        jMenuIngresarProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                jMenuIngresarProductoActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem5);
+        jMenu2.add(jMenuIngresarProducto);
 
-        jMenuItem6.setText("Modificar Producto");
-        jMenu2.add(jMenuItem6);
+        jMenuModificarProducto.setText("Modificar Producto");
+        jMenuModificarProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuModificarProductoActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuModificarProducto);
 
-        jMenuItem7.setText("Eliminar Producto");
-        jMenu2.add(jMenuItem7);
+        jMenuEliminarProducto.setText("Eliminar Producto");
+        jMenuEliminarProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuEliminarProductoActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuEliminarProducto);
 
-        jMenuItem8.setText("Ver Inventario Productos");
-        jMenu2.add(jMenuItem8);
+        jMenuInventarioProductos.setText("Ver Inventario Productos");
+        jMenuInventarioProductos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuInventarioProductosActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuInventarioProductos);
 
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Ofertas");
 
-        jMenuItem9.setText("Insertar Ofertas");
-        jMenu3.add(jMenuItem9);
+        jMenuIngresarOferta.setText("Insertar Ofertas");
+        jMenu3.add(jMenuIngresarOferta);
 
-        jMenuItem10.setText("Modificar Ofertas");
-        jMenu3.add(jMenuItem10);
+        jMenuModificarOferta.setText("Modificar Ofertas");
+        jMenu3.add(jMenuModificarOferta);
 
-        jMenuItem11.setText("Eliinar Ofertas");
-        jMenu3.add(jMenuItem11);
+        jMenuEliminarOferta.setText("Eliminar Ofertas");
+        jMenu3.add(jMenuEliminarOferta);
 
-        jMenuItem12.setText("Ver Lista de Ofertas");
-        jMenu3.add(jMenuItem12);
+        jMenuListadoOferta.setText("Ver Lista de Ofertas");
+        jMenu3.add(jMenuListadoOferta);
 
         jMenuBar1.add(jMenu3);
 
@@ -147,17 +170,89 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void jMenuModificarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuModificarClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+        JIntlFrmInsertarCliente insertarCliente = new JIntlFrmInsertarCliente();
+        JIntlFrmListadoClientes listadoCliente = new JIntlFrmListadoClientes();
+        JIntlFrmEliminarCliente eliminarCliente = new JIntlFrmEliminarCliente();
+        JIntlFrmModificarCliente modificarCliente = new JIntlFrmModificarCliente();
+        ClienteControlador clienteControlador = new ClienteControlador(insertarCliente, listadoCliente, eliminarCliente, modificarCliente);
+        modificarCliente.setVisible(true);
+    }//GEN-LAST:event_jMenuModificarClienteActionPerformed
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenu2ActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+    private void jMenuIngresarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuIngresarProductoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+        JIntFrmInsertarProducto insertarProducto = new JIntFrmInsertarProducto();
+        JIntFrmListadoProducto listadoProducto = new JIntFrmListadoProducto();
+        JIntlFrmEliminarProducto eliminarProducto = new JIntlFrmEliminarProducto();
+        JIntFrmModificarProducto modificarProducto = new JIntFrmModificarProducto();
+        ProductoControlador productoControlador = new ProductoControlador(insertarProducto, listadoProducto, modificarProducto, eliminarProducto);
+        insertarProducto.setVisible(true);
+    }//GEN-LAST:event_jMenuIngresarProductoActionPerformed
+
+    private void jMenuIngresarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuIngresarClienteActionPerformed
+        // TODO add your handling code here:
+        JIntlFrmInsertarCliente insertarCliente = new JIntlFrmInsertarCliente();
+        JIntlFrmListadoClientes listadoCliente = new JIntlFrmListadoClientes();
+        JIntlFrmEliminarCliente eliminarCliente = new JIntlFrmEliminarCliente();
+        JIntlFrmModificarCliente modificarCliente = new JIntlFrmModificarCliente();
+        ClienteControlador clienteControlador = new ClienteControlador(insertarCliente, listadoCliente, eliminarCliente, modificarCliente);
+        insertarCliente.setVisible(true);
+    }//GEN-LAST:event_jMenuIngresarClienteActionPerformed
+
+    private void jMenuEliminarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuEliminarClienteActionPerformed
+        // TODO add your handling code here:
+        JIntlFrmInsertarCliente insertarCliente = new JIntlFrmInsertarCliente();
+        JIntlFrmListadoClientes listadoCliente = new JIntlFrmListadoClientes();
+        JIntlFrmEliminarCliente eliminarCliente = new JIntlFrmEliminarCliente();
+        JIntlFrmModificarCliente modificarCliente = new JIntlFrmModificarCliente();
+        ClienteControlador clienteControlador = new ClienteControlador(insertarCliente, listadoCliente, eliminarCliente, modificarCliente);
+        eliminarCliente.setVisible(true);
+    }//GEN-LAST:event_jMenuEliminarClienteActionPerformed
+
+    private void jMenuListadoClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuListadoClientesActionPerformed
+        // TODO add your handling code here:
+        JIntlFrmInsertarCliente insertarCliente = new JIntlFrmInsertarCliente();
+        JIntlFrmListadoClientes listadoCliente = new JIntlFrmListadoClientes();
+        JIntlFrmEliminarCliente eliminarCliente = new JIntlFrmEliminarCliente();
+        JIntlFrmModificarCliente modificarCliente = new JIntlFrmModificarCliente();
+        ClienteControlador clienteControlador = new ClienteControlador(insertarCliente, listadoCliente, eliminarCliente, modificarCliente);
+        listadoCliente.setVisible(true);
+    }//GEN-LAST:event_jMenuListadoClientesActionPerformed
+
+    private void jMenuModificarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuModificarProductoActionPerformed
+        // TODO add your handling code here:
+        JIntFrmInsertarProducto insertarProducto = new JIntFrmInsertarProducto();
+        JIntFrmListadoProducto listadoProducto = new JIntFrmListadoProducto();
+        JIntlFrmEliminarProducto eliminarProducto = new JIntlFrmEliminarProducto();
+        JIntFrmModificarProducto modificarProducto = new JIntFrmModificarProducto();
+        ProductoControlador productoControlador = new ProductoControlador(insertarProducto, listadoProducto, modificarProducto, eliminarProducto);
+        modificarProducto.setVisible(true);
+    }//GEN-LAST:event_jMenuModificarProductoActionPerformed
+
+    private void jMenuEliminarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuEliminarProductoActionPerformed
+        // TODO add your handling code here:
+        JIntFrmInsertarProducto insertarProducto = new JIntFrmInsertarProducto();
+        JIntFrmListadoProducto listadoProducto = new JIntFrmListadoProducto();
+        JIntlFrmEliminarProducto eliminarProducto = new JIntlFrmEliminarProducto();
+        JIntFrmModificarProducto modificarProducto = new JIntFrmModificarProducto();
+        ProductoControlador productoControlador = new ProductoControlador(insertarProducto, listadoProducto, modificarProducto, eliminarProducto);
+        eliminarProducto.setVisible(true);
+    }//GEN-LAST:event_jMenuEliminarProductoActionPerformed
+
+    private void jMenuInventarioProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuInventarioProductosActionPerformed
+        // TODO add your handling code here:
+        JIntFrmInsertarProducto insertarProducto = new JIntFrmInsertarProducto();
+        JIntFrmListadoProducto listadoProducto = new JIntFrmListadoProducto();
+        JIntlFrmEliminarProducto eliminarProducto = new JIntlFrmEliminarProducto();
+        JIntFrmModificarProducto modificarProducto = new JIntFrmModificarProducto();
+        ProductoControlador productoControlador = new ProductoControlador(insertarProducto, listadoProducto, modificarProducto, eliminarProducto);
+        listadoProducto.setVisible(true);
+    }//GEN-LAST:event_jMenuInventarioProductosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -201,17 +296,17 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem11;
-    private javax.swing.JMenuItem jMenuItem12;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JMenuItem jMenuEliminarCliente;
+    private javax.swing.JMenuItem jMenuEliminarOferta;
+    private javax.swing.JMenuItem jMenuEliminarProducto;
+    private javax.swing.JMenuItem jMenuIngresarCliente;
+    private javax.swing.JMenuItem jMenuIngresarOferta;
+    private javax.swing.JMenuItem jMenuIngresarProducto;
+    private javax.swing.JMenuItem jMenuInventarioProductos;
+    private javax.swing.JMenuItem jMenuListadoClientes;
+    private javax.swing.JMenuItem jMenuListadoOferta;
+    private javax.swing.JMenuItem jMenuModificarCliente;
+    private javax.swing.JMenuItem jMenuModificarOferta;
+    private javax.swing.JMenuItem jMenuModificarProducto;
     // End of variables declaration//GEN-END:variables
 }
