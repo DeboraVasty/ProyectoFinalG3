@@ -20,7 +20,7 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jDeskPEncargadoVentas = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuIngresarCliente = new javax.swing.JMenuItem();
@@ -41,16 +41,16 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jDesktopPane1.setBackground(new java.awt.Color(153, 255, 255));
+        jDeskPEncargadoVentas.setBackground(new java.awt.Color(153, 255, 255));
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout jDeskPEncargadoVentasLayout = new javax.swing.GroupLayout(jDeskPEncargadoVentas);
+        jDeskPEncargadoVentas.setLayout(jDeskPEncargadoVentasLayout);
+        jDeskPEncargadoVentasLayout.setHorizontalGroup(
+            jDeskPEncargadoVentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 658, Short.MAX_VALUE)
         );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jDeskPEncargadoVentasLayout.setVerticalGroup(
+            jDeskPEncargadoVentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 509, Short.MAX_VALUE)
         );
 
@@ -157,13 +157,13 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jDeskPEncargadoVentas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jDeskPEncargadoVentas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -177,6 +177,7 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
         JIntlFrmEliminarCliente eliminarCliente = new JIntlFrmEliminarCliente();
         JIntlFrmModificarCliente modificarCliente = new JIntlFrmModificarCliente();
         ClienteControlador clienteControlador = new ClienteControlador(insertarCliente, listadoCliente, eliminarCliente, modificarCliente);
+        jDeskPEncargadoVentas.add(modificarCliente);
         modificarCliente.setVisible(true);
     }//GEN-LAST:event_jMenuModificarClienteActionPerformed
 
@@ -191,6 +192,7 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
         JIntlFrmEliminarProducto eliminarProducto = new JIntlFrmEliminarProducto();
         JIntFrmModificarProducto modificarProducto = new JIntFrmModificarProducto();
         ProductoControlador productoControlador = new ProductoControlador(insertarProducto, listadoProducto, modificarProducto, eliminarProducto);
+        jDeskPEncargadoVentas.add(insertarProducto);
         insertarProducto.setVisible(true);
     }//GEN-LAST:event_jMenuIngresarProductoActionPerformed
 
@@ -201,6 +203,7 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
         JIntlFrmEliminarCliente eliminarCliente = new JIntlFrmEliminarCliente();
         JIntlFrmModificarCliente modificarCliente = new JIntlFrmModificarCliente();
         ClienteControlador clienteControlador = new ClienteControlador(insertarCliente, listadoCliente, eliminarCliente, modificarCliente);
+        jDeskPEncargadoVentas.add(insertarCliente);
         insertarCliente.setVisible(true);
     }//GEN-LAST:event_jMenuIngresarClienteActionPerformed
 
@@ -211,6 +214,7 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
         JIntlFrmEliminarCliente eliminarCliente = new JIntlFrmEliminarCliente();
         JIntlFrmModificarCliente modificarCliente = new JIntlFrmModificarCliente();
         ClienteControlador clienteControlador = new ClienteControlador(insertarCliente, listadoCliente, eliminarCliente, modificarCliente);
+        jDeskPEncargadoVentas.add(eliminarCliente);
         eliminarCliente.setVisible(true);
     }//GEN-LAST:event_jMenuEliminarClienteActionPerformed
 
@@ -221,6 +225,7 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
         JIntlFrmEliminarCliente eliminarCliente = new JIntlFrmEliminarCliente();
         JIntlFrmModificarCliente modificarCliente = new JIntlFrmModificarCliente();
         ClienteControlador clienteControlador = new ClienteControlador(insertarCliente, listadoCliente, eliminarCliente, modificarCliente);
+        jDeskPEncargadoVentas.add(listadoCliente);
         listadoCliente.setVisible(true);
     }//GEN-LAST:event_jMenuListadoClientesActionPerformed
 
@@ -231,6 +236,7 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
         JIntlFrmEliminarProducto eliminarProducto = new JIntlFrmEliminarProducto();
         JIntFrmModificarProducto modificarProducto = new JIntFrmModificarProducto();
         ProductoControlador productoControlador = new ProductoControlador(insertarProducto, listadoProducto, modificarProducto, eliminarProducto);
+        jDeskPEncargadoVentas.add(modificarProducto);
         modificarProducto.setVisible(true);
     }//GEN-LAST:event_jMenuModificarProductoActionPerformed
 
@@ -241,6 +247,7 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
         JIntlFrmEliminarProducto eliminarProducto = new JIntlFrmEliminarProducto();
         JIntFrmModificarProducto modificarProducto = new JIntFrmModificarProducto();
         ProductoControlador productoControlador = new ProductoControlador(insertarProducto, listadoProducto, modificarProducto, eliminarProducto);
+        jDeskPEncargadoVentas.add(eliminarProducto);
         eliminarProducto.setVisible(true);
     }//GEN-LAST:event_jMenuEliminarProductoActionPerformed
 
@@ -251,6 +258,7 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
         JIntlFrmEliminarProducto eliminarProducto = new JIntlFrmEliminarProducto();
         JIntFrmModificarProducto modificarProducto = new JIntFrmModificarProducto();
         ProductoControlador productoControlador = new ProductoControlador(insertarProducto, listadoProducto, modificarProducto, eliminarProducto);
+        jDeskPEncargadoVentas.add(listadoProducto);
         listadoProducto.setVisible(true);
     }//GEN-LAST:event_jMenuInventarioProductosActionPerformed
 
@@ -290,7 +298,7 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JDesktopPane jDeskPEncargadoVentas;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
