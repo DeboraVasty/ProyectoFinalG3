@@ -19,16 +19,27 @@ public class ProductoControlador implements ActionListener{
     ProductosModelo productosModelo = new ProductosModelo();
     String mensaje;
 
-    public ProductoControlador(JIntFrmInsertarProducto insertarProducto, JIntFrmListadoProducto listadoProducto, JIntFrmModificarProducto modificarProducto, JIntlFrmEliminarProducto eliminarProducto) {
-        this.insertarProducto=insertarProducto;
+    public ProductoControlador(JIntlFrmEliminarProducto eliminarProducto) {
         this.eliminarProducto=eliminarProducto;
-        this.listadoProducto=listadoProducto;
-        this.modificarProducto=modificarProducto;
-        this.insertarProducto.jBtnInsertarProducto.addActionListener(this);
         this.eliminarProducto.jBtnEliminarProducto.addActionListener(this);
-        this.modificarProducto.jBtnModificarProducto.addActionListener(this);
         cargarTabla();
     }
+
+    public ProductoControlador(JIntFrmInsertarProducto insertarProducto) {
+        this.insertarProducto=insertarProducto;
+        this.insertarProducto.jBtnInsertarProducto.addActionListener(this);
+    }
+
+    public ProductoControlador(JIntFrmListadoProducto listadoProducto) {
+        this.listadoProducto=listadoProducto;
+        cargarTabla();
+    }
+
+    public ProductoControlador(JIntFrmModificarProducto modificarProducto) {
+        this.modificarProducto=modificarProducto;
+        this.modificarProducto.jBtnModificarProducto.addActionListener(this);
+    }
+    
     
     public void cargarTabla(){
         ArrayList<ProductosModelo> lista = new ArrayList();

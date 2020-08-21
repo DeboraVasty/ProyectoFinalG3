@@ -19,16 +19,28 @@ public class OfertaControlador implements ActionListener{
     OfertasModelo ofertaModelo = new OfertasModelo();
     String mensaje;
 
-    public OfertaControlador(JIntFrmInsertarOferta insertarOferta, JIntFrmEliminarOferta eliminarOferta, JIntFrmListadoOfertas listadoOferta, JIntFrmModificarOferta modificarOferta) {
-        this.insertarOferta=insertarOferta;
-        this.eliminarOferta=eliminarOferta;
-        this.listadoOferta=listadoOferta;
+    public OfertaControlador(JIntFrmModificarOferta modificarOferta) {
         this.modificarOferta=modificarOferta;
-        this.insertarOferta.jBtnInsertarOfertas.addActionListener(this);
-        this.eliminarOferta.jBtnEliminarOfertas.addActionListener(this);
         this.modificarOferta.jBtnModificarOferta.addActionListener(this);
         cargarTabla();
     }
+
+    public OfertaControlador(JIntFrmInsertarOferta insertarOferta) {
+      this.insertarOferta=insertarOferta;
+      this.insertarOferta.jBtnInsertarOfertas.addActionListener(this);
+    }
+
+    public OfertaControlador(JIntFrmEliminarOferta eliminarOferta) {
+        this.eliminarOferta=eliminarOferta;
+        this.eliminarOferta.jBtnEliminarOfertas.addActionListener(this);
+        cargarTabla();
+    }
+
+    public OfertaControlador(JIntFrmListadoOfertas listadoOferta) {
+        this.listadoOferta=listadoOferta;
+        cargarTabla();
+    }
+    
     
     public void cargarTabla(){
         ArrayList<OfertasModelo> lista = new ArrayList();

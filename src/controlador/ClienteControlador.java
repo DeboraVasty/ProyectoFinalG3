@@ -19,19 +19,27 @@ public class ClienteControlador implements ActionListener{
     ClientesModelo clienteModelo = new ClientesModelo();
     String mensaje;
 
-    public ClienteControlador(JIntlFrmInsertarCliente insertarCliente, JIntlFrmListadoClientes listadoCliente, JIntlFrmEliminarCliente eliminarCliente,JIntlFrmModificarCliente modificarCliente) {
+    public ClienteControlador(JIntlFrmInsertarCliente insertarCliente) {
         this.insertarCliente=insertarCliente;
-        this.listadoCliente=listadoCliente;
-        this.eliminarCliente=eliminarCliente;
-        this.modificarCliente=modificarCliente;
         this.insertarCliente.jBtnInsertarCliente.addActionListener(this);
-        this.insertarCliente.jBtnRegresar.addActionListener(this);
-        this.modificarCliente.jBtnModificarCliente.addActionListener(this);
-        this.modificarCliente.jBtnRegresar.addActionListener(this);
-        this.eliminarCliente.jBtnEliminarCliente.addActionListener(this);
-        this.eliminarCliente.jBtnRegresar.addActionListener(this);
+    }
+
+    public ClienteControlador(JIntlFrmListadoClientes listadoCliente) {
+        this.listadoCliente=listadoCliente;
         cargarTabla1();
     }
+
+    public ClienteControlador(JIntlFrmEliminarCliente eliminarCliente) {
+        this.eliminarCliente=eliminarCliente;
+        this.eliminarCliente.jBtnEliminarCliente.addActionListener(this);
+        cargarTabla1();
+    }
+
+    public ClienteControlador(JIntlFrmModificarCliente modificarCliente) {
+        this.modificarCliente=modificarCliente;
+        this.modificarCliente.jBtnModificarCliente.addActionListener(this);
+    }
+    
     
     public void cargarTabla1(){
         ArrayList<ClientesModelo> lista = new ArrayList();
