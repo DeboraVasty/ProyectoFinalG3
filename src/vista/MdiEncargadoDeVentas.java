@@ -29,6 +29,7 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
         btnFacturas = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jDeskPEncargadoVentas = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuIngresarCliente = new javax.swing.JMenuItem();
@@ -80,6 +81,18 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cubo.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jDeskPEncargadoVentas.setBackground(new java.awt.Color(153, 255, 255));
+
+        javax.swing.GroupLayout jDeskPEncargadoVentasLayout = new javax.swing.GroupLayout(jDeskPEncargadoVentas);
+        jDeskPEncargadoVentas.setLayout(jDeskPEncargadoVentasLayout);
+        jDeskPEncargadoVentasLayout.setHorizontalGroup(
+            jDeskPEncargadoVentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 658, Short.MAX_VALUE)
+        );
+        jDeskPEncargadoVentasLayout.setVerticalGroup(
+            jDeskPEncargadoVentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 509, Short.MAX_VALUE)
+        );
 
         jMenu1.setText("Clientes");
 
@@ -179,16 +192,29 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jDeskPEncargadoVentas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jDeskPEncargadoVentas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuModificarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuModificarClienteActionPerformed
         // TODO add your handling code here:
-        JIntlFrmInsertarCliente insertarCliente = new JIntlFrmInsertarCliente();
-        JIntlFrmListadoClientes listadoCliente = new JIntlFrmListadoClientes();
-        JIntlFrmEliminarCliente eliminarCliente = new JIntlFrmEliminarCliente();
         JIntlFrmModificarCliente modificarCliente = new JIntlFrmModificarCliente();
-        ClienteControlador clienteControlador = new ClienteControlador(insertarCliente, listadoCliente, eliminarCliente, modificarCliente);
+        ClienteControlador clienteModificar = new ClienteControlador(modificarCliente);
+        jDeskPEncargadoVentas.add(modificarCliente);
         modificarCliente.setVisible(true);
     }//GEN-LAST:event_jMenuModificarClienteActionPerformed
 
@@ -199,70 +225,56 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
     private void jMenuIngresarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuIngresarProductoActionPerformed
         // TODO add your handling code here:
         JIntFrmInsertarProducto insertarProducto = new JIntFrmInsertarProducto();
-        JIntFrmListadoProducto listadoProducto = new JIntFrmListadoProducto();
-        JIntlFrmEliminarProducto eliminarProducto = new JIntlFrmEliminarProducto();
-        JIntFrmModificarProducto modificarProducto = new JIntFrmModificarProducto();
-        ProductoControlador productoControlador = new ProductoControlador(insertarProducto, listadoProducto, modificarProducto, eliminarProducto);
+        ProductoControlador productoIngresar = new ProductoControlador(insertarProducto);
+        jDeskPEncargadoVentas.add(insertarProducto);
         insertarProducto.setVisible(true);
     }//GEN-LAST:event_jMenuIngresarProductoActionPerformed
 
     private void jMenuIngresarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuIngresarClienteActionPerformed
         // TODO add your handling code here:
         JIntlFrmInsertarCliente insertarCliente = new JIntlFrmInsertarCliente();
-        JIntlFrmListadoClientes listadoCliente = new JIntlFrmListadoClientes();
-        JIntlFrmEliminarCliente eliminarCliente = new JIntlFrmEliminarCliente();
-        JIntlFrmModificarCliente modificarCliente = new JIntlFrmModificarCliente();
-        ClienteControlador clienteControlador = new ClienteControlador(insertarCliente, listadoCliente, eliminarCliente, modificarCliente);
+        ClienteControlador clienteIngresar = new ClienteControlador(insertarCliente);
+        jDeskPEncargadoVentas.add(insertarCliente);
         insertarCliente.setVisible(true);
     }//GEN-LAST:event_jMenuIngresarClienteActionPerformed
 
     private void jMenuEliminarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuEliminarClienteActionPerformed
         // TODO add your handling code here:
-        JIntlFrmInsertarCliente insertarCliente = new JIntlFrmInsertarCliente();
-        JIntlFrmListadoClientes listadoCliente = new JIntlFrmListadoClientes();
         JIntlFrmEliminarCliente eliminarCliente = new JIntlFrmEliminarCliente();
-        JIntlFrmModificarCliente modificarCliente = new JIntlFrmModificarCliente();
-        ClienteControlador clienteControlador = new ClienteControlador(insertarCliente, listadoCliente, eliminarCliente, modificarCliente);
+        ClienteControlador clienteEliminar = new ClienteControlador(eliminarCliente);
+        jDeskPEncargadoVentas.add(eliminarCliente);
         eliminarCliente.setVisible(true);
     }//GEN-LAST:event_jMenuEliminarClienteActionPerformed
 
     private void jMenuListadoClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuListadoClientesActionPerformed
         // TODO add your handling code here:
-        JIntlFrmInsertarCliente insertarCliente = new JIntlFrmInsertarCliente();
         JIntlFrmListadoClientes listadoCliente = new JIntlFrmListadoClientes();
-        JIntlFrmEliminarCliente eliminarCliente = new JIntlFrmEliminarCliente();
-        JIntlFrmModificarCliente modificarCliente = new JIntlFrmModificarCliente();
-        ClienteControlador clienteControlador = new ClienteControlador(insertarCliente, listadoCliente, eliminarCliente, modificarCliente);
+        ClienteControlador clienteListado = new ClienteControlador(listadoCliente);
+        jDeskPEncargadoVentas.add(listadoCliente);
         listadoCliente.setVisible(true);
     }//GEN-LAST:event_jMenuListadoClientesActionPerformed
 
     private void jMenuModificarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuModificarProductoActionPerformed
         // TODO add your handling code here:
-        JIntFrmInsertarProducto insertarProducto = new JIntFrmInsertarProducto();
-        JIntFrmListadoProducto listadoProducto = new JIntFrmListadoProducto();
-        JIntlFrmEliminarProducto eliminarProducto = new JIntlFrmEliminarProducto();
         JIntFrmModificarProducto modificarProducto = new JIntFrmModificarProducto();
-        ProductoControlador productoControlador = new ProductoControlador(insertarProducto, listadoProducto, modificarProducto, eliminarProducto);
+        ProductoControlador productoModificado = new ProductoControlador(modificarProducto);
+        jDeskPEncargadoVentas.add(modificarProducto);
         modificarProducto.setVisible(true);
     }//GEN-LAST:event_jMenuModificarProductoActionPerformed
 
     private void jMenuEliminarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuEliminarProductoActionPerformed
         // TODO add your handling code here:
-        JIntFrmInsertarProducto insertarProducto = new JIntFrmInsertarProducto();
-        JIntFrmListadoProducto listadoProducto = new JIntFrmListadoProducto();
         JIntlFrmEliminarProducto eliminarProducto = new JIntlFrmEliminarProducto();
-        JIntFrmModificarProducto modificarProducto = new JIntFrmModificarProducto();
-        ProductoControlador productoControlador = new ProductoControlador(insertarProducto, listadoProducto, modificarProducto, eliminarProducto);
+        ProductoControlador productoEliminar = new ProductoControlador(eliminarProducto);
+        jDeskPEncargadoVentas.add(eliminarProducto);
         eliminarProducto.setVisible(true);
     }//GEN-LAST:event_jMenuEliminarProductoActionPerformed
 
     private void jMenuInventarioProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuInventarioProductosActionPerformed
         // TODO add your handling code here:
-        JIntFrmInsertarProducto insertarProducto = new JIntFrmInsertarProducto();
         JIntFrmListadoProducto listadoProducto = new JIntFrmListadoProducto();
-        JIntlFrmEliminarProducto eliminarProducto = new JIntlFrmEliminarProducto();
-        JIntFrmModificarProducto modificarProducto = new JIntFrmModificarProducto();
-        ProductoControlador productoControlador = new ProductoControlador(insertarProducto, listadoProducto, modificarProducto, eliminarProducto);
+        ProductoControlador productoListado = new ProductoControlador(listadoProducto);
+        jDeskPEncargadoVentas.add(listadoProducto);
         listadoProducto.setVisible(true);
     }//GEN-LAST:event_jMenuInventarioProductosActionPerformed
 
@@ -311,6 +323,7 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JDesktopPane jDeskPEncargadoVentas;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
