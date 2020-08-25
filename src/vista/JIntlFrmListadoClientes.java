@@ -69,6 +69,7 @@ public class JIntlFrmListadoClientes extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(jTblListadoClientes);
 
         jBtnRegresar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jBtnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_volver.jpg"))); // NOI18N
         jBtnRegresar.setText("Regresar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

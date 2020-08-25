@@ -56,6 +56,7 @@ public class JIntFrmListadoProducto extends javax.swing.JInternalFrame {
         );
 
         jBtnRegresar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jBtnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_volver.jpg"))); // NOI18N
         jBtnRegresar.setText("Regresar");
 
         jTblListadoProductos.setModel(new javax.swing.table.DefaultTableModel(
