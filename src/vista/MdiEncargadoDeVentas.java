@@ -47,11 +47,11 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
         jDeskPEncargadoVentas.setLayout(jDeskPEncargadoVentasLayout);
         jDeskPEncargadoVentasLayout.setHorizontalGroup(
             jDeskPEncargadoVentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 775, Short.MAX_VALUE)
+            .addGap(0, 1084, Short.MAX_VALUE)
         );
         jDeskPEncargadoVentasLayout.setVerticalGroup(
             jDeskPEncargadoVentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 568, Short.MAX_VALUE)
+            .addGap(0, 637, Short.MAX_VALUE)
         );
 
         jMenu1.setText("Clientes");
@@ -156,11 +156,15 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDeskPEncargadoVentas)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jDeskPEncargadoVentas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDeskPEncargadoVentas)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jDeskPEncargadoVentas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
