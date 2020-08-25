@@ -61,7 +61,7 @@ public class ClienteControlador implements ActionListener{
             columna[5]=cliente.getCorreo_electronico();
             modeloTabla.addRow(columna);
         }
-        //listadoCliente.jTblListadoClientes.setModel(modeloTabla);
+        listadoCliente.jTblListadoClientes.setModel(modeloTabla);
         eliminarCliente.jTblListadoClientes.setModel(modeloTabla);
     }
     

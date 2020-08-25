@@ -58,7 +58,7 @@ public class OfertaControlador implements ActionListener{
             columna[3]=oferta.getFecha_Fin();
             modeloTabla.addRow(columna);
         }
-        //listadoOferta.jTblListadoOfertas.setModel(modeloTabla);
+        listadoOferta.jTblListadoOfertas.setModel(modeloTabla);
         eliminarOferta.jTblListadoOfertas.setModel(modeloTabla);
     }
     

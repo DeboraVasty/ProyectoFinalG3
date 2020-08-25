@@ -59,7 +59,7 @@ public class ProductoControlador implements ActionListener{
             columna[4]=producto.getTipo_producto_id();
             modeloTabla.addRow(columna);
         }
-        //listadoProducto.jTblListadoProductos.setModel(modeloTabla);
+        listadoProducto.jTblListadoProductos.setModel(modeloTabla);
         eliminarProducto.jTblListadoProductos.setModel(modeloTabla);
     }
     
