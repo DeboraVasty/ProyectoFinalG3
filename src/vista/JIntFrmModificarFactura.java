@@ -9,12 +9,12 @@ package vista;
  *
  * @author Marvin Joel
  */
-public class JIntFrmInsertarFactura extends javax.swing.JInternalFrame {
+public class JIntFrmModificarFactura extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form JIntFrmInsertarFactura
+     * Creates new form JIntFrmModificarFactura
      */
-    public JIntFrmInsertarFactura() {
+    public JIntFrmModificarFactura() {
         initComponents();
     }
 
@@ -37,25 +37,25 @@ public class JIntFrmInsertarFactura extends javax.swing.JInternalFrame {
         jTxtSerie = new javax.swing.JTextField();
         jLblCodigo3 = new javax.swing.JLabel();
         jTxtFecha = new javax.swing.JTextField();
-        jBtnInsertarFactura = new javax.swing.JButton();
-        jBtnRegresar = new javax.swing.JButton();
-        jTxtSubtotal = new javax.swing.JTextField();
-        jLblCodigo4 = new javax.swing.JLabel();
-        jLblCodigo5 = new javax.swing.JLabel();
-        jTxtDireccion = new javax.swing.JTextField();
-        jTxtNombre = new javax.swing.JTextField();
-        jLblCodigo6 = new javax.swing.JLabel();
         jLblCodigo7 = new javax.swing.JLabel();
         jTxtNit = new javax.swing.JTextField();
-        jTxtClienteID = new javax.swing.JTextField();
-        jLblCodigo8 = new javax.swing.JLabel();
+        jLblCodigo6 = new javax.swing.JLabel();
+        jTxtNombre = new javax.swing.JTextField();
+        jLblCodigo5 = new javax.swing.JLabel();
+        jTxtDireccion = new javax.swing.JTextField();
+        jLblCodigo4 = new javax.swing.JLabel();
+        jTxtSubtotal = new javax.swing.JTextField();
+        jBtModificarFactura = new javax.swing.JButton();
+        jBtnRegresar = new javax.swing.JButton();
         jLblCodigo9 = new javax.swing.JLabel();
         jTxtDescuento = new javax.swing.JTextField();
+        jLblCodigo8 = new javax.swing.JLabel();
+        jTxtClienteID = new javax.swing.JTextField();
 
         jPanel1.setBackground(new java.awt.Color(102, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel1.setText("Insertar Factura");
+        jLabel1.setText("Modificar Factura");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -64,7 +64,7 @@ public class JIntFrmInsertarFactura extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(235, 235, 235)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(285, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -94,42 +94,42 @@ public class JIntFrmInsertarFactura extends javax.swing.JInternalFrame {
 
         jTxtFecha.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
-        jBtnInsertarFactura.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jBtnInsertarFactura.setText("Insertar");
+        jLblCodigo7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo7.setText("Nit:");
 
-        jBtnRegresar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jBtnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_volver.jpg"))); // NOI18N
-        jBtnRegresar.setText("Regresar");
+        jTxtNit.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
-        jTxtSubtotal.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo6.setText("Nombre:");
 
-        jLblCodigo4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLblCodigo4.setText("Subtotal:");
+        jTxtNombre.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
         jLblCodigo5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLblCodigo5.setText("Direccion:");
 
         jTxtDireccion.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
-        jTxtNombre.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo4.setText("Subtotal:");
 
-        jLblCodigo6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLblCodigo6.setText("Nombre:");
+        jTxtSubtotal.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
-        jLblCodigo7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLblCodigo7.setText("Nit:");
+        jBtModificarFactura.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jBtModificarFactura.setText("Modificar");
 
-        jTxtNit.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-
-        jTxtClienteID.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-
-        jLblCodigo8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLblCodigo8.setText("Cliente ID:");
+        jBtnRegresar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jBtnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_volver.jpg"))); // NOI18N
+        jBtnRegresar.setText("Regresar");
 
         jLblCodigo9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLblCodigo9.setText("Descuento:");
 
         jTxtDescuento.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+
+        jLblCodigo8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo8.setText("Cliente ID:");
+
+        jTxtClienteID.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -163,7 +163,7 @@ public class JIntFrmInsertarFactura extends javax.swing.JInternalFrame {
                                             .addComponent(jTxtNit, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(78, 78, 78)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jBtnInsertarFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jBtModificarFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jBtnRegresar)))
                                     .addComponent(jTxtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTxtSubtotal, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -207,7 +207,7 @@ public class JIntFrmInsertarFactura extends javax.swing.JInternalFrame {
                             .addComponent(jTxtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(43, 43, 43)
-                        .addComponent(jBtnInsertarFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jBtModificarFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -237,7 +237,7 @@ public class JIntFrmInsertarFactura extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLblCodigo8)
                     .addComponent(jTxtClienteID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -245,7 +245,7 @@ public class JIntFrmInsertarFactura extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jBtnInsertarFactura;
+    public javax.swing.JButton jBtModificarFactura;
     public javax.swing.JButton jBtnRegresar;
     private javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLblCodigo;
