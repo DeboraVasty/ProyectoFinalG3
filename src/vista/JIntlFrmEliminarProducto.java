@@ -77,6 +77,7 @@ public class JIntlFrmEliminarProducto extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(jTblListadoProductos);
 
         jBtnRegresar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jBtnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_volver.jpg"))); // NOI18N
         jBtnRegresar.setText("Regresar");
 
         jBtnEliminarProducto.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
