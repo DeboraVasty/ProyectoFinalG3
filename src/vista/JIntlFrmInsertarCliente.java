@@ -43,6 +43,10 @@ public class JIntlFrmInsertarCliente extends javax.swing.JInternalFrame {
         jTxtCorreo = new javax.swing.JTextField();
         jBtnInsertarCliente = new javax.swing.JButton();
         jBtnRegresar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+
+        setClosable(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(102, 255, 255));
 
@@ -54,9 +58,9 @@ public class JIntlFrmInsertarCliente extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(207, 207, 207)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(222, 222, 222)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(280, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -66,125 +70,75 @@ public class JIntlFrmInsertarCliente extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, -1));
+
         jTxtCodigo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jTxtCodigo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jTxtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 207, -1));
 
         jLblCodigo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo.setForeground(new java.awt.Color(255, 255, 255));
         jLblCodigo.setText("Código:");
+        getContentPane().add(jLblCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
 
         jLblCodigo1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo1.setForeground(new java.awt.Color(255, 255, 255));
         jLblCodigo1.setText("Nombre:");
+        getContentPane().add(jLblCodigo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
 
         jTxtNombre.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jTxtNombre.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jTxtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, 477, -1));
 
         jLblCodigo2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo2.setForeground(new java.awt.Color(255, 255, 255));
         jLblCodigo2.setText("Apellido:");
+        getContentPane().add(jLblCodigo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
 
         jTxtApelldio.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jTxtApelldio.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jTxtApelldio, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 477, -1));
 
         jLblCodigo3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo3.setForeground(new java.awt.Color(255, 255, 255));
         jLblCodigo3.setText("Telefono:");
+        getContentPane().add(jLblCodigo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
 
         jTxtTelefono.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jTxtTelefono.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jTxtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 207, -1));
 
         jLblCodigo4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo4.setForeground(new java.awt.Color(255, 255, 255));
         jLblCodigo4.setText("Dirección:");
+        getContentPane().add(jLblCodigo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
 
         jTxtDireccion.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jTxtDireccion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jTxtDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 477, -1));
 
         jLblCodigo5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo5.setForeground(new java.awt.Color(255, 255, 255));
         jLblCodigo5.setText("Correo:");
+        getContentPane().add(jLblCodigo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
 
         jTxtCorreo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jTxtCorreo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jTxtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 477, -1));
 
         jBtnInsertarCliente.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jBtnInsertarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/botonAgregar.jpg"))); // NOI18N
         jBtnInsertarCliente.setText("Insertar");
+        getContentPane().add(jBtnInsertarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 400, -1, 37));
 
         jBtnRegresar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jBtnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_volver.jpg"))); // NOI18N
         jBtnRegresar.setText("Regresar");
+        getContentPane().add(jBtnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 400, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLblCodigo2)
-                                .addGap(38, 38, 38)
-                                .addComponent(jTxtApelldio))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLblCodigo1)
-                                    .addComponent(jLblCodigo))
-                                .addGap(35, 35, 35)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTxtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTxtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 477, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLblCodigo3)
-                                    .addComponent(jLblCodigo5)
-                                    .addComponent(jLblCodigo4))
-                                .addGap(23, 23, 23)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTxtDireccion)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTxtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTxtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 477, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(0, 0, Short.MAX_VALUE))))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(189, 189, 189)
-                        .addComponent(jBtnInsertarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBtnRegresar)))
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLblCodigo)
-                    .addComponent(jTxtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLblCodigo1)
-                    .addComponent(jTxtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLblCodigo2)
-                    .addComponent(jTxtApelldio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLblCodigo3)
-                    .addComponent(jTxtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLblCodigo4)
-                    .addComponent(jTxtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLblCodigo5)
-                    .addComponent(jTxtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBtnInsertarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBtnRegresar))
-                .addGap(34, 34, 34))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cubo.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 665, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -194,6 +148,7 @@ public class JIntlFrmInsertarCliente extends javax.swing.JInternalFrame {
     public javax.swing.JButton jBtnInsertarCliente;
     public javax.swing.JButton jBtnRegresar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLblCodigo;
     public javax.swing.JLabel jLblCodigo1;
     public javax.swing.JLabel jLblCodigo2;

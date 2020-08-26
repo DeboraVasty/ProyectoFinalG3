@@ -29,6 +29,8 @@ public class JIntlFrmInsertarEmpleado extends javax.swing.JInternalFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLblCodigo = new javax.swing.JLabel();
         jTxtEmpleadoID = new javax.swing.JTextField();
         jLblCodigo1 = new javax.swing.JLabel();
@@ -47,154 +49,102 @@ public class JIntlFrmInsertarEmpleado extends javax.swing.JInternalFrame {
         jTxtContrasenia = new javax.swing.JTextField();
         jBtnInsertarEmpleado = new javax.swing.JButton();
         jBtnRegresar = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+
+        setClosable(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         jLabel1.setText("Insertar Empleado");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 200, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(235, 235, 235)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(244, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addContainerGap())
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/vendedor.jpg"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 10, 50, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logoP.jpg"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 120, 80));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, -1));
 
         jLblCodigo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo.setForeground(new java.awt.Color(255, 255, 255));
         jLblCodigo.setText("Empleado ID:");
+        getContentPane().add(jLblCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, -1, -1));
 
         jTxtEmpleadoID.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(jTxtEmpleadoID, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 207, -1));
 
         jLblCodigo1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo1.setForeground(new java.awt.Color(255, 255, 255));
         jLblCodigo1.setText("Nombre:");
+        getContentPane().add(jLblCodigo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
 
         jTxtNombre.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(jTxtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, 207, -1));
 
         jLblCodigo2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo2.setForeground(new java.awt.Color(255, 255, 255));
         jLblCodigo2.setText("Apellido:");
+        getContentPane().add(jLblCodigo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, -1, -1));
 
         jTxtApellido.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(jTxtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 207, -1));
 
         jLblCodigo3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo3.setForeground(new java.awt.Color(255, 255, 255));
         jLblCodigo3.setText("Telefono:");
+        getContentPane().add(jLblCodigo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, -1, -1));
 
         jTxtTelefono.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(jTxtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 290, 207, -1));
 
         jLblCodigo7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo7.setForeground(new java.awt.Color(255, 255, 255));
         jLblCodigo7.setText("Direccion:");
+        getContentPane().add(jLblCodigo7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 360, -1, -1));
 
         jTxtDireccion.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(jTxtDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 207, -1));
 
         jLblCodigo6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo6.setForeground(new java.awt.Color(255, 255, 255));
         jLblCodigo6.setText("Correo:");
+        getContentPane().add(jLblCodigo6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 420, -1, -1));
 
         jTxtCorreo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(jTxtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, 207, -1));
 
         jLblCodigo5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo5.setForeground(new java.awt.Color(255, 255, 255));
         jLblCodigo5.setText("Puesto ID:");
+        getContentPane().add(jLblCodigo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, -1, -1));
 
         jTxtPuestoID.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(jTxtPuestoID, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 460, 207, -1));
 
         jLblCodigo4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLblCodigo4.setForeground(new java.awt.Color(255, 255, 255));
         jLblCodigo4.setText("Contrasenia:");
+        getContentPane().add(jLblCodigo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 520, -1, -1));
 
         jTxtContrasenia.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(jTxtContrasenia, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 520, 207, -1));
 
         jBtnInsertarEmpleado.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jBtnInsertarEmpleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/botonAgregar.jpg"))); // NOI18N
         jBtnInsertarEmpleado.setText("Insertar");
+        getContentPane().add(jBtnInsertarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 210, 180, 37));
 
         jBtnRegresar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jBtnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_volver.jpg"))); // NOI18N
         jBtnRegresar.setText("Regresar");
+        getContentPane().add(jBtnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 300, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLblCodigo)
-                    .addComponent(jLblCodigo1)
-                    .addComponent(jLblCodigo2)
-                    .addComponent(jLblCodigo3)
-                    .addComponent(jLblCodigo7)
-                    .addComponent(jLblCodigo6)
-                    .addComponent(jLblCodigo5)
-                    .addComponent(jLblCodigo4))
-                .addGap(86, 86, 86)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTxtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTxtPuestoID, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTxtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTxtEmpleadoID)
-                                .addComponent(jTxtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTxtApellido)
-                                .addComponent(jTxtTelefono, javax.swing.GroupLayout.Alignment.TRAILING))
-                            .addComponent(jTxtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(59, 59, 59)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jBtnRegresar)
-                            .addComponent(jBtnInsertarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTxtEmpleadoID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLblCodigo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTxtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLblCodigo1))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTxtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLblCodigo2))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTxtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLblCodigo3)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jBtnInsertarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTxtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLblCodigo7)
-                    .addComponent(jBtnRegresar))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTxtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLblCodigo6))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTxtPuestoID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLblCodigo5))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTxtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLblCodigo4))
-                .addGap(0, 10, Short.MAX_VALUE))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cubo.jpg"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 610));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -204,6 +154,9 @@ public class JIntlFrmInsertarEmpleado extends javax.swing.JInternalFrame {
     public javax.swing.JButton jBtnInsertarEmpleado;
     public javax.swing.JButton jBtnRegresar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     public javax.swing.JLabel jLblCodigo;
     public javax.swing.JLabel jLblCodigo1;
     public javax.swing.JLabel jLblCodigo2;
