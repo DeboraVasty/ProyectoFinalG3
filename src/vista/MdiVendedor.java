@@ -1,14 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vista;
-
-/**
- *
- * @author Marvin Joel
- */
+import controlador.ClienteControlador;
+import controlador.OfertaControlador;
+import controlador.ProductoControlador;
+import controlador.DetalleFacturaControlador;
+import controlador.FacturaControlador;
+import controlador.EmpleadoControlador;
+import controlador.ProductoOfertaControlador;
+import controlador.PuestosControlador;
+import controlador.TipoProductoControlador;
 public class MdiVendedor extends javax.swing.JFrame {
 
     /**
@@ -39,12 +38,31 @@ public class MdiVendedor extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jlblFondo = new javax.swing.JLabel();
+        jDeskPVentas = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        jMenuInsertarCliente = new javax.swing.JMenuItem();
+        jMenuModificarCliente = new javax.swing.JMenuItem();
+        jMenuEliminarCliente = new javax.swing.JMenuItem();
+        jMenuListadoCliente = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenuListadoProducto = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
+        jMenuListadoOferta = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
+        jMenuInsertarFactura = new javax.swing.JMenuItem();
+        jMenuModificarFactura = new javax.swing.JMenuItem();
+        jMenuEliminarFactura = new javax.swing.JMenuItem();
+        jMenuListadoFactura = new javax.swing.JMenuItem();
+        jMenu5 = new javax.swing.JMenu();
+        jMenuListadoProductoOferta = new javax.swing.JMenuItem();
+        jMenu6 = new javax.swing.JMenu();
+        jMenuListadoTipoProducto = new javax.swing.JMenuItem();
+        jMenu7 = new javax.swing.JMenu();
+        jMenuInsertarDetalleFactura = new javax.swing.JMenuItem();
+        jMenuModificarDetalleFactura = new javax.swing.JMenuItem();
+        jMenuEliminarDetalleFactura = new javax.swing.JMenuItem();
+        jMenuListadoDetalleFactura = new javax.swing.JMenuItem();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -96,9 +114,9 @@ public class MdiVendedor extends javax.swing.JFrame {
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo.JPG"))); // NOI18N
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 440, 370));
 
-        jlblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cubo.jpg"))); // NOI18N
-        jlblFondo.setText("jLabel1");
-        jPanel2.add(jlblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 480));
+        jDeskPVentas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cubo.jpg"))); // NOI18N
+        jDeskPVentas.setText("jLabel1");
+        jPanel2.add(jDeskPVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 480));
 
         jDesktopPane1.setLayer(jPanel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
@@ -114,16 +132,160 @@ public class MdiVendedor extends javax.swing.JFrame {
         );
 
         jMenu1.setText("Clientes");
+
+        jMenuInsertarCliente.setText("Insertar Cliente");
+        jMenuInsertarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuInsertarClienteActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuInsertarCliente);
+
+        jMenuModificarCliente.setText("Modificar Cliente");
+        jMenuModificarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuModificarClienteActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuModificarCliente);
+
+        jMenuEliminarCliente.setText("Eliminar Cliente");
+        jMenuEliminarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuEliminarClienteActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuEliminarCliente);
+
+        jMenuListadoCliente.setText("Listado de Clientes");
+        jMenuListadoCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuListadoClienteActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuListadoCliente);
+
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Productos");
+
+        jMenuListadoProducto.setText("Listado de Productos");
+        jMenuListadoProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuListadoProductoActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuListadoProducto);
+
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Ofertas");
+
+        jMenuListadoOferta.setText("Listado de Oferta");
+        jMenuListadoOferta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuListadoOfertaActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuListadoOferta);
+
         jMenuBar1.add(jMenu3);
 
         jMenu4.setText("Factura");
+
+        jMenuInsertarFactura.setText("Insertar Factura");
+        jMenuInsertarFactura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuInsertarFacturaActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuInsertarFactura);
+
+        jMenuModificarFactura.setText("Modificar Factura");
+        jMenuModificarFactura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuModificarFacturaActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuModificarFactura);
+
+        jMenuEliminarFactura.setText("Eliminar Factura");
+        jMenuEliminarFactura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuEliminarFacturaActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuEliminarFactura);
+
+        jMenuListadoFactura.setText("Listado de Facturas");
+        jMenuListadoFactura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuListadoFacturaActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuListadoFactura);
+
         jMenuBar1.add(jMenu4);
+
+        jMenu5.setText("Productos Ofertas");
+
+        jMenuListadoProductoOferta.setText("Listado Producto Oferta");
+        jMenuListadoProductoOferta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuListadoProductoOfertaActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuListadoProductoOferta);
+
+        jMenuBar1.add(jMenu5);
+
+        jMenu6.setText("Tipos Productos");
+
+        jMenuListadoTipoProducto.setText("Listados Tipos Productos");
+        jMenuListadoTipoProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuListadoTipoProductoActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jMenuListadoTipoProducto);
+
+        jMenuBar1.add(jMenu6);
+
+        jMenu7.setText("Detalle Factura");
+
+        jMenuInsertarDetalleFactura.setText("Insertar Detalle Factura");
+        jMenuInsertarDetalleFactura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuInsertarDetalleFacturaActionPerformed(evt);
+            }
+        });
+        jMenu7.add(jMenuInsertarDetalleFactura);
+
+        jMenuModificarDetalleFactura.setText("Modificar Detalle Factura");
+        jMenuModificarDetalleFactura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuModificarDetalleFacturaActionPerformed(evt);
+            }
+        });
+        jMenu7.add(jMenuModificarDetalleFactura);
+
+        jMenuEliminarDetalleFactura.setText("Eliminar Detalle Factura");
+        jMenuEliminarDetalleFactura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuEliminarDetalleFacturaActionPerformed(evt);
+            }
+        });
+        jMenu7.add(jMenuEliminarDetalleFactura);
+
+        jMenuListadoDetalleFactura.setText("Listado Detalle Factura");
+        jMenuListadoDetalleFactura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuListadoDetalleFacturaActionPerformed(evt);
+            }
+        });
+        jMenu7.add(jMenuListadoDetalleFactura);
+
+        jMenuBar1.add(jMenu7);
 
         setJMenuBar(jMenuBar1);
 
@@ -140,6 +302,134 @@ public class MdiVendedor extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuListadoProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuListadoProductoActionPerformed
+        // TODO add your handling code here:
+        JIntFrmListadoProducto listadoProducto = new JIntFrmListadoProducto();
+        ProductoControlador productoListado = new ProductoControlador(listadoProducto);
+        jDeskPVentas.add(listadoProducto);
+        listadoProducto.setVisible(true);
+    }//GEN-LAST:event_jMenuListadoProductoActionPerformed
+
+    private void jMenuInsertarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuInsertarClienteActionPerformed
+        // TODO add your handling code here:
+        JIntlFrmInsertarCliente insertarCliente = new JIntlFrmInsertarCliente();
+        ClienteControlador clienteIngresar = new ClienteControlador(insertarCliente);
+        jDeskPVentas.add(insertarCliente);
+        insertarCliente.setVisible(true);
+    }//GEN-LAST:event_jMenuInsertarClienteActionPerformed
+
+    private void jMenuModificarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuModificarClienteActionPerformed
+        // TODO add your handling code here:
+        JIntlFrmModificarCliente modificarCliente = new JIntlFrmModificarCliente();
+        ClienteControlador clienteModificar = new ClienteControlador(modificarCliente);
+        jDeskPVentas.add(modificarCliente);
+        modificarCliente.setVisible(true);
+    }//GEN-LAST:event_jMenuModificarClienteActionPerformed
+
+    private void jMenuEliminarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuEliminarClienteActionPerformed
+        // TODO add your handling code here:
+        JIntlFrmEliminarCliente eliminarCliente = new JIntlFrmEliminarCliente();
+        ClienteControlador clienteEliminar = new ClienteControlador(eliminarCliente);
+        jDeskPVentas.add(eliminarCliente);
+        eliminarCliente.setVisible(true);
+    }//GEN-LAST:event_jMenuEliminarClienteActionPerformed
+
+    private void jMenuListadoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuListadoClienteActionPerformed
+        // TODO add your handling code here:
+        JIntlFrmListadoClientes listadoCliente = new JIntlFrmListadoClientes();
+        ClienteControlador clienteListado = new ClienteControlador(listadoCliente);
+        jDeskPVentas.add(listadoCliente);
+        listadoCliente.setVisible(true);
+    }//GEN-LAST:event_jMenuListadoClienteActionPerformed
+
+    private void jMenuListadoOfertaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuListadoOfertaActionPerformed
+        // TODO add your handling code here:
+        JIntFrmListadoOfertas listadoOferta = new JIntFrmListadoOfertas();
+        OfertaControlador ofertaControlador = new OfertaControlador(listadoOferta);
+        jDeskPVentas.add(listadoOferta);
+        listadoOferta.setVisible(true);
+    }//GEN-LAST:event_jMenuListadoOfertaActionPerformed
+
+    private void jMenuInsertarFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuInsertarFacturaActionPerformed
+        // TODO add your handling code here:
+        JIntFrmInsertarFactura insertarFactura = new JIntFrmInsertarFactura();
+        FacturaControlador facturaControlador = new FacturaControlador(insertarFactura);
+        jDeskPVentas.add(insertarFactura);
+        insertarFactura.setVisible(true);
+    }//GEN-LAST:event_jMenuInsertarFacturaActionPerformed
+
+    private void jMenuModificarFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuModificarFacturaActionPerformed
+        // TODO add your handling code here:
+        JIntFrmModificarFactura modificarFactura = new JIntFrmModificarFactura();
+        FacturaControlador facturaControlador = new FacturaControlador(modificarFactura);
+        jDeskPVentas.add(modificarFactura);
+        modificarFactura.setVisible(true);
+    }//GEN-LAST:event_jMenuModificarFacturaActionPerformed
+
+    private void jMenuEliminarFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuEliminarFacturaActionPerformed
+        // TODO add your handling code here:
+        JIntFrmEliminarFactura eliminarFactura = new JIntFrmEliminarFactura();
+        FacturaControlador facturaControlador = new FacturaControlador(eliminarFactura);
+        jDeskPVentas.add(eliminarFactura);
+        eliminarFactura.setVisible(true);
+    }//GEN-LAST:event_jMenuEliminarFacturaActionPerformed
+
+    private void jMenuListadoFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuListadoFacturaActionPerformed
+        // TODO add your handling code here:
+        JIntFrmListadoFactura listadoFactura = new JIntFrmListadoFactura();
+        FacturaControlador facturaControlador = new FacturaControlador(listadoFactura);
+        jDeskPVentas.add(listadoFactura);
+        listadoFactura.setVisible(true);
+    }//GEN-LAST:event_jMenuListadoFacturaActionPerformed
+
+    private void jMenuListadoProductoOfertaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuListadoProductoOfertaActionPerformed
+        // TODO add your handling code here:
+        JIntFrmListadoProductoOferta listadoProductoO = new JIntFrmListadoProductoOferta();
+        ProductoOfertaControlador productoOControlador = new ProductoOfertaControlador(listadoProductoO);
+        jDeskPVentas.add(listadoProductoO);
+        listadoProductoO.setVisible(true);
+    }//GEN-LAST:event_jMenuListadoProductoOfertaActionPerformed
+
+    private void jMenuListadoTipoProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuListadoTipoProductoActionPerformed
+        // TODO add your handling code here:
+        JIntFrmListadoTipoProducto listadoTipo = new JIntFrmListadoTipoProducto();
+        TipoProductoControlador tipoOControlador = new TipoProductoControlador(listadoTipo);
+        jDeskPVentas.add(listadoTipo);
+        listadoTipo.setVisible(true);
+    }//GEN-LAST:event_jMenuListadoTipoProductoActionPerformed
+
+    private void jMenuInsertarDetalleFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuInsertarDetalleFacturaActionPerformed
+        // TODO add your handling code here:
+        JIntFrmInsertarDetalleFactura insertarDetalle = new JIntFrmInsertarDetalleFactura();
+        DetalleFacturaControlador detalleControlador = new DetalleFacturaControlador(insertarDetalle);
+        jDeskPVentas.add(insertarDetalle);
+        insertarDetalle.setVisible(true);
+    }//GEN-LAST:event_jMenuInsertarDetalleFacturaActionPerformed
+
+    private void jMenuModificarDetalleFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuModificarDetalleFacturaActionPerformed
+        // TODO add your handling code here:
+        JIntFrmModificarDetalleFactura modificarDetalle = new JIntFrmModificarDetalleFactura();
+        DetalleFacturaControlador detalleControlador = new DetalleFacturaControlador(modificarDetalle);
+        jDeskPVentas.add(modificarDetalle);
+        modificarDetalle.setVisible(true);
+    }//GEN-LAST:event_jMenuModificarDetalleFacturaActionPerformed
+
+    private void jMenuEliminarDetalleFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuEliminarDetalleFacturaActionPerformed
+        // TODO add your handling code here:
+        JIntFrmEliminarDetalleFactura eliminarDetalle = new JIntFrmEliminarDetalleFactura();
+        DetalleFacturaControlador detalleControlador = new DetalleFacturaControlador(eliminarDetalle);
+        jDeskPVentas.add(eliminarDetalle);
+        eliminarDetalle.setVisible(true);
+    }//GEN-LAST:event_jMenuEliminarDetalleFacturaActionPerformed
+
+    private void jMenuListadoDetalleFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuListadoDetalleFacturaActionPerformed
+        // TODO add your handling code here:
+        JIntlFrmListadoDetalleFactura listadoDetalle = new JIntlFrmListadoDetalleFactura();
+        DetalleFacturaControlador tipoOControlador = new DetalleFacturaControlador(listadoDetalle);
+        jDeskPVentas.add(listadoDetalle);
+        listadoDetalle.setVisible(true);
+    }//GEN-LAST:event_jMenuListadoDetalleFacturaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,6 +471,7 @@ public class MdiVendedor extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JLabel jDeskPVentas;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -191,9 +482,27 @@ public class MdiVendedor extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuEliminarCliente;
+    private javax.swing.JMenuItem jMenuEliminarDetalleFactura;
+    private javax.swing.JMenuItem jMenuEliminarFactura;
+    private javax.swing.JMenuItem jMenuInsertarCliente;
+    private javax.swing.JMenuItem jMenuInsertarDetalleFactura;
+    private javax.swing.JMenuItem jMenuInsertarFactura;
+    private javax.swing.JMenuItem jMenuListadoCliente;
+    private javax.swing.JMenuItem jMenuListadoDetalleFactura;
+    private javax.swing.JMenuItem jMenuListadoFactura;
+    private javax.swing.JMenuItem jMenuListadoOferta;
+    private javax.swing.JMenuItem jMenuListadoProducto;
+    private javax.swing.JMenuItem jMenuListadoProductoOferta;
+    private javax.swing.JMenuItem jMenuListadoTipoProducto;
+    private javax.swing.JMenuItem jMenuModificarCliente;
+    private javax.swing.JMenuItem jMenuModificarDetalleFactura;
+    private javax.swing.JMenuItem jMenuModificarFactura;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel jlblFondo;
     // End of variables declaration//GEN-END:variables
 }

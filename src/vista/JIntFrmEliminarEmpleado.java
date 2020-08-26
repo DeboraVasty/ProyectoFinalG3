@@ -30,7 +30,7 @@ public class JIntFrmEliminarEmpleado extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTblListadoFacturas = new javax.swing.JTable();
+        jTblListadoEmpleado = new javax.swing.JTable();
         jLblCodigo1 = new javax.swing.JLabel();
         jTxtEmpleadoID = new javax.swing.JTextField();
         jBtnEliminarEmpleado = new javax.swing.JButton();
@@ -58,7 +58,7 @@ public class JIntFrmEliminarEmpleado extends javax.swing.JInternalFrame {
                 .addContainerGap())
         );
 
-        jTblListadoFacturas.setModel(new javax.swing.table.DefaultTableModel(
+        jTblListadoEmpleado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null},
@@ -69,7 +69,7 @@ public class JIntFrmEliminarEmpleado extends javax.swing.JInternalFrame {
                 "empleado_id", "nombre", "apellido", "telefono", "direccion", "correo", "puesto_id", "contrasenia"
             }
         ));
-        jScrollPane1.setViewportView(jTblListadoFacturas);
+        jScrollPane1.setViewportView(jTblListadoEmpleado);
 
         jLblCodigo1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLblCodigo1.setText("Empleado ID:");
@@ -132,7 +132,7 @@ public class JIntFrmEliminarEmpleado extends javax.swing.JInternalFrame {
     public javax.swing.JLabel jLblCodigo1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JTable jTblListadoFacturas;
+    public javax.swing.JTable jTblListadoEmpleado;
     public javax.swing.JTextField jTxtEmpleadoID;
     // End of variables declaration//GEN-END:variables
 }
