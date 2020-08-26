@@ -30,7 +30,7 @@ public class JIntFrmListadoEmpleado extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTblListadoFacturas = new javax.swing.JTable();
+        jTblListadoEmpleado = new javax.swing.JTable();
         jBtnRegresar = new javax.swing.JButton();
 
         jPanel1.setBackground(new java.awt.Color(102, 255, 255));
@@ -55,7 +55,7 @@ public class JIntFrmListadoEmpleado extends javax.swing.JInternalFrame {
                 .addContainerGap())
         );
 
-        jTblListadoFacturas.setModel(new javax.swing.table.DefaultTableModel(
+        jTblListadoEmpleado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null},
@@ -66,7 +66,7 @@ public class JIntFrmListadoEmpleado extends javax.swing.JInternalFrame {
                 "empleado_id", "nombre", "apellido", "telefono", "direccion", "correo", "puesto_id", "contrasenia"
             }
         ));
-        jScrollPane1.setViewportView(jTblListadoFacturas);
+        jScrollPane1.setViewportView(jTblListadoEmpleado);
 
         jBtnRegresar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jBtnRegresar.setText("Regresar");
@@ -105,6 +105,6 @@ public class JIntFrmListadoEmpleado extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JTable jTblListadoFacturas;
+    public javax.swing.JTable jTblListadoEmpleado;
     // End of variables declaration//GEN-END:variables
 }
