@@ -38,11 +38,11 @@ public class MdiInformatica extends javax.swing.JFrame {
         jDeskPInformatica.setLayout(jDeskPInformaticaLayout);
         jDeskPInformaticaLayout.setHorizontalGroup(
             jDeskPInformaticaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 767, Short.MAX_VALUE)
+            .addGap(0, 845, Short.MAX_VALUE)
         );
         jDeskPInformaticaLayout.setVerticalGroup(
             jDeskPInformaticaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 530, Short.MAX_VALUE)
+            .addGap(0, 547, Short.MAX_VALUE)
         );
 
         jMenu1.setText("Empleados");
