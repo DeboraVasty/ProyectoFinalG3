@@ -105,7 +105,7 @@ public class JIntlFrmModificarCliente extends javax.swing.JInternalFrame {
         jTxtCodigo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jTxtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 107, 207, -1));
 
-        jPanel1.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         jLabel1.setText("Modificar Cliente");
