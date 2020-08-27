@@ -33,8 +33,18 @@ public class JIntFrmListadoFactura extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setTitle("Listado Factura");
+
         jBtnRegresar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jBtnRegresar.setText("Regresar");
+        jBtnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnRegresarActionPerformed(evt);
+            }
+        });
 
         jTblListadoFacturas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -98,6 +108,11 @@ public class JIntFrmListadoFactura extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBtnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnRegresarActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jBtnRegresarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -38,6 +38,11 @@ public class JIntFrmModificarPuesto extends javax.swing.JInternalFrame {
         jBtnRegresar = new javax.swing.JButton();
         jBtnModificarPuesto = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setTitle("Modificar Puesto");
+
         jPanel1.setBackground(new java.awt.Color(102, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
@@ -78,6 +83,11 @@ public class JIntFrmModificarPuesto extends javax.swing.JInternalFrame {
         jBtnRegresar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jBtnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_volver.jpg"))); // NOI18N
         jBtnRegresar.setText("Regresar");
+        jBtnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnRegresarActionPerformed(evt);
+            }
+        });
 
         jBtnModificarPuesto.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jBtnModificarPuesto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/modificar.jpg"))); // NOI18N
@@ -132,6 +142,11 @@ public class JIntFrmModificarPuesto extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBtnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnRegresarActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jBtnRegresarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

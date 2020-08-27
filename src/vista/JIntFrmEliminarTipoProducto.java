@@ -36,6 +36,11 @@ public class JIntFrmEliminarTipoProducto extends javax.swing.JInternalFrame {
         jBtnEliminarTipoProducto = new javax.swing.JButton();
         jBtnRegresar = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setTitle("Eliminar Tipo Producto");
+
         jTblListadoTiposProductos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jTblListadoTiposProductos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -84,6 +89,11 @@ public class JIntFrmEliminarTipoProducto extends javax.swing.JInternalFrame {
         jBtnRegresar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jBtnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_volver.jpg"))); // NOI18N
         jBtnRegresar.setText("Regresar");
+        jBtnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnRegresarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -126,6 +136,11 @@ public class JIntFrmEliminarTipoProducto extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBtnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnRegresarActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jBtnRegresarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

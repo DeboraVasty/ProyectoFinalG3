@@ -37,6 +37,7 @@ public class JIntlFrmListadoDetalleFactura extends javax.swing.JInternalFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setClosable(true);
+        setTitle("Listado Detalles Factura");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
@@ -94,14 +95,24 @@ public class JIntlFrmListadoDetalleFactura extends javax.swing.JInternalFrame {
         jBtnRegresar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jBtnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_volver.jpg"))); // NOI18N
         jBtnRegresar.setText("Regresar");
+        jBtnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnRegresarActionPerformed(evt);
+            }
+        });
         getContentPane().add(jBtnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 586, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cubo.jpg"))); // NOI18N
         jLabel4.setText("jLabel4");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 630));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBtnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnRegresarActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jBtnRegresarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

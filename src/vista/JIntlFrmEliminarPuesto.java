@@ -38,6 +38,9 @@ public class JIntlFrmEliminarPuesto extends javax.swing.JInternalFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setTitle("Listado Puesto");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
@@ -96,6 +99,11 @@ public class JIntlFrmEliminarPuesto extends javax.swing.JInternalFrame {
         jBtnRegresar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jBtnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_volver.jpg"))); // NOI18N
         jBtnRegresar.setText("Regresar");
+        jBtnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnRegresarActionPerformed(evt);
+            }
+        });
         getContentPane().add(jBtnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 450, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cubo.jpg"))); // NOI18N
@@ -104,6 +112,11 @@ public class JIntlFrmEliminarPuesto extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBtnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnRegresarActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jBtnRegresarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

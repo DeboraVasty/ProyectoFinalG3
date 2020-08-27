@@ -45,6 +45,10 @@ public class JIntFrmListadoOfertas extends javax.swing.JInternalFrame {
 
         setBackground(new java.awt.Color(153, 204, 255));
         setBorder(javax.swing.BorderFactory.createTitledBorder("Lista de Ofertas"));
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setTitle("Listado de Ofertas");
 
         jPanel2.setBackground(new java.awt.Color(153, 204, 255));
 
@@ -148,6 +152,7 @@ public class JIntFrmListadoOfertas extends javax.swing.JInternalFrame {
 
     private void jBtnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnRegresarActionPerformed
         // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_jBtnRegresarActionPerformed
 
 
