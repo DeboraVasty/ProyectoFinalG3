@@ -494,7 +494,7 @@ public class MdiEncargadoDeVentas extends javax.swing.JFrame {
         listadoDetalle.setVisible(true);
     }//GEN-LAST:event_jMenuListadoDetalleFacturaActionPerformed
 
-    /**
+    /** a las 5:34 si funcionava despues no
      * @param args the command line arguments
      */
     public static void main(String args[]) {
