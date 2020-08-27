@@ -33,6 +33,11 @@ public class JIntFrmListadoTipoProducto extends javax.swing.JInternalFrame {
         jTblListadoTiposProductos = new javax.swing.JTable();
         jBtnRegresar = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setTitle("Listado Tipos Productos");
+
         jPanel1.setBackground(new java.awt.Color(204, 255, 255));
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(153, 153, 153), null, null));
 
@@ -110,6 +115,7 @@ public class JIntFrmListadoTipoProducto extends javax.swing.JInternalFrame {
 
     private void jBtnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnRegresarActionPerformed
         // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_jBtnRegresarActionPerformed
 
 

@@ -48,6 +48,7 @@ public class JIntlFrmModificarCliente extends javax.swing.JInternalFrame {
         fondo = new javax.swing.JLabel();
 
         setClosable(true);
+        setTitle("Modificar Cliente");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jBtnModificarCliente.setBackground(new java.awt.Color(102, 204, 255));
@@ -163,6 +164,7 @@ public class JIntlFrmModificarCliente extends javax.swing.JInternalFrame {
 
     private void jBtnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnRegresarActionPerformed
         // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_jBtnRegresarActionPerformed
 
 
