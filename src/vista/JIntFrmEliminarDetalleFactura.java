@@ -35,6 +35,10 @@ public class JIntFrmEliminarDetalleFactura extends javax.swing.JInternalFrame {
         jTblListadoDetalleFactura = new javax.swing.JTable();
         jBtnEliminarDetalleFactura = new javax.swing.JButton();
         jBtnRegresar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+
+        setClosable(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(102, 255, 255));
 
@@ -46,7 +50,7 @@ public class JIntFrmEliminarDetalleFactura extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(254, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(232, 232, 232))
         );
@@ -58,10 +62,14 @@ public class JIntFrmEliminarDetalleFactura extends javax.swing.JInternalFrame {
                 .addContainerGap())
         );
 
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 739, -1));
+
         jLblCodigo1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLblCodigo1.setText("Correlativo Detalle:");
+        getContentPane().add(jLblCodigo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 71, -1, -1));
 
         jTxtCorrelativoDetalle.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(jTxtCorrelativoDetalle, new org.netbeans.lib.awtextra.AbsoluteConstraints(355, 68, 207, -1));
 
         jTblListadoDetalleFactura.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -76,53 +84,20 @@ public class JIntFrmEliminarDetalleFactura extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(jTblListadoDetalleFactura);
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 114, 719, 298));
+
         jBtnEliminarDetalleFactura.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jBtnEliminarDetalleFactura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/elimBoton.jpg"))); // NOI18N
         jBtnEliminarDetalleFactura.setText("Eliminar");
+        getContentPane().add(jBtnEliminarDetalleFactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 430, 167, 42));
 
         jBtnRegresar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jBtnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_volver.jpg"))); // NOI18N
         jBtnRegresar.setText("Regresar");
+        getContentPane().add(jBtnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 430, -1, 40));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 719, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(31, 31, 31)
-                                .addComponent(jLblCodigo1)
-                                .addGap(121, 121, 121)
-                                .addComponent(jTxtCorrelativoDetalle, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(192, 192, 192)
-                                .addComponent(jBtnRegresar)
-                                .addGap(48, 48, 48)
-                                .addComponent(jBtnEliminarDetalleFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLblCodigo1)
-                    .addComponent(jTxtCorrelativoDetalle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jBtnEliminarDetalleFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBtnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 24, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cubo.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -132,6 +107,7 @@ public class JIntFrmEliminarDetalleFactura extends javax.swing.JInternalFrame {
     public javax.swing.JButton jBtnEliminarDetalleFactura;
     public javax.swing.JButton jBtnRegresar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLblCodigo1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

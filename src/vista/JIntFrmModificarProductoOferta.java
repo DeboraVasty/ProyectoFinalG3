@@ -43,6 +43,10 @@ public class JIntFrmModificarProductoOferta extends javax.swing.JInternalFrame {
         jTxtFechaIngreso = new javax.swing.JTextField();
         jBtModificarProductoOferta = new javax.swing.JButton();
         jBtnRegresar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+
+        setClosable(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(102, 255, 255));
 
@@ -56,7 +60,7 @@ public class JIntFrmModificarProductoOferta extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(192, 192, 192)
                 .addComponent(jLabel1)
-                .addContainerGap(210, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -66,110 +70,63 @@ public class JIntFrmModificarProductoOferta extends javax.swing.JInternalFrame {
                 .addContainerGap())
         );
 
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 668, -1));
+
         jLblCodigo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLblCodigo.setText("Correlativo:");
+        getContentPane().add(jLblCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 71, -1, -1));
 
         jTxtCorrelativo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(jTxtCorrelativo, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 68, 207, -1));
 
         jLblCodigo1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLblCodigo1.setText("Producto ID:");
+        getContentPane().add(jLblCodigo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 117, -1, -1));
 
         jTxtProductoID.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(jTxtProductoID, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 114, 207, -1));
 
         jLblCodigo2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLblCodigo2.setText("Oferta ID:");
+        getContentPane().add(jLblCodigo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
 
         jTxtOfertaID.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(jTxtOfertaID, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 167, 207, -1));
 
         jLblCodigo3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLblCodigo3.setText("Descuento:");
+        getContentPane().add(jLblCodigo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 223, -1, -1));
 
         jTxtDescuento.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(jTxtDescuento, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 220, 207, -1));
 
         jLblCodigo7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLblCodigo7.setText("Empleado ID:");
+        getContentPane().add(jLblCodigo7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 305, -1, -1));
 
         jTxtEmpleadoID.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(jTxtEmpleadoID, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 302, 207, -1));
 
         jLblCodigo6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLblCodigo6.setText("Fecha Ingreso:");
+        getContentPane().add(jLblCodigo6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 358, -1, -1));
 
         jTxtFechaIngreso.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(jTxtFechaIngreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 355, 207, -1));
 
         jBtModificarProductoOferta.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jBtModificarProductoOferta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/modificar.jpg"))); // NOI18N
         jBtModificarProductoOferta.setText("Modificar");
+        getContentPane().add(jBtModificarProductoOferta, new org.netbeans.lib.awtextra.AbsoluteConstraints(481, 167, -1, -1));
 
         jBtnRegresar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jBtnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_volver.jpg"))); // NOI18N
         jBtnRegresar.setText("Regresar");
+        getContentPane().add(jBtnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(481, 260, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLblCodigo)
-                    .addComponent(jLblCodigo1)
-                    .addComponent(jLblCodigo2)
-                    .addComponent(jLblCodigo3)
-                    .addComponent(jLblCodigo7)
-                    .addComponent(jLblCodigo6))
-                .addGap(86, 86, 86)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTxtCorrelativo)
-                            .addComponent(jTxtProductoID, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTxtOfertaID)
-                            .addComponent(jTxtDescuento, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jBtModificarProductoOferta)
-                            .addComponent(jBtnRegresar)))
-                    .addComponent(jTxtFechaIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTxtEmpleadoID, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTxtCorrelativo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLblCodigo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTxtProductoID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLblCodigo1))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTxtOfertaID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLblCodigo2))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTxtDescuento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLblCodigo3))
-                        .addGap(15, 15, 15))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jBtModificarProductoOferta)
-                        .addGap(40, 40, 40)
-                        .addComponent(jBtnRegresar)
-                        .addGap(5, 5, 5)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTxtEmpleadoID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLblCodigo7))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTxtFechaIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLblCodigo6))
-                .addGap(0, 18, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cubo.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -179,6 +136,7 @@ public class JIntFrmModificarProductoOferta extends javax.swing.JInternalFrame {
     public javax.swing.JButton jBtModificarProductoOferta;
     public javax.swing.JButton jBtnRegresar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLblCodigo;
     public javax.swing.JLabel jLblCodigo1;
     public javax.swing.JLabel jLblCodigo2;
