@@ -7,7 +7,7 @@ public class MdiInformatica extends javax.swing.JFrame {
      * Creates new form MdiInformatica
      */
     public MdiInformatica() {
-        initComponents();
+        initComponents(); 
     }
 
     /**
